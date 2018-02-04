@@ -65,6 +65,10 @@ class ApplicationController < Sinatra::Base
     redirect "/"
   end
 
+  get '/deposit' do
+    erb :deposit
+  end
+
   helpers do
     def logged_in?
       !!session[:user_id]
