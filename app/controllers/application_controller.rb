@@ -69,6 +69,10 @@ class ApplicationController < Sinatra::Base
     erb :deposit
   end
 
+  post '/deposit' do
+    erb :success
+  end
+
   helpers do
     def logged_in?
       !!session[:user_id]
