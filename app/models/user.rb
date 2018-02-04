@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   end
 
   def deposit(amount)
-    balance += amount.to_i
+    balance + amount.to_i
   end
     
   
