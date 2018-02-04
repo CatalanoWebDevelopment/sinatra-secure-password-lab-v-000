@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
 
   def withdraw(amount)
     balance - amount.to_i
+  end
     
   
 end
