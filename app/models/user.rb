@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
 
   def init 
     self.balance ||= 0.00
-  end
+  end 
+  
 end
