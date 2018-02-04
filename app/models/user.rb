@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
   def deposit(amount)
     balance + amount.to_i
   end
+
+  def withdraw(amount)
+    balance - amount.to_i
     
   
 end
