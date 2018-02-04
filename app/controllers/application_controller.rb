@@ -70,6 +70,10 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/deposit' do
+    @user = User.find(session[:user_id])
+    @user.deposit(params["deposit"])
+    @user.save 
+    
     erb :success
   end
 
