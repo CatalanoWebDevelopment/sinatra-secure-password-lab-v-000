@@ -1,6 +1,7 @@
 require "./config/environment"
 require "./app/models/user"
 require 'pry'
+
 class ApplicationController < Sinatra::Base
 
   configure do
@@ -72,6 +73,7 @@ class ApplicationController < Sinatra::Base
 
   post '/deposit' do
     @user = User.find(session[:user_id])
+    binding.pry
     @user.deposit(params["deposit"])
     @user.save
 
