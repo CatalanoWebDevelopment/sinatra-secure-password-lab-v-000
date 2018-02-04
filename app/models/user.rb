@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     self.balance ||= 0.00
   end
 
-  def deposit(amount)
+  def self.deposit(amount)
     self.balance.to_i += amount
   end
     
