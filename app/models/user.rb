@@ -1,11 +1,11 @@
 class User < ActiveRecord::Base
-  has_secure_password 
+  has_secure_password
   validates :username, :presence => true
 
-  after_initialize :init 
+  after_initialize :init
 
-  def init 
+  def init
     self.balance ||= 0.00
-  end 
+  end
   
 end
