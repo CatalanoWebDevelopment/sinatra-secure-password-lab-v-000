@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   end
 
   def self.deposit(amount)
+    balance += amount
+  end
     
   
 end
